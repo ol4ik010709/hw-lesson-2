@@ -11,7 +11,7 @@
 //   }
 // Запишіть результат як число або null (якщо нічого не виведеться)
 
-const task1Answer = null; // <- ваша відповідь
+const task1Answer = 1; // <- ваша відповідь
 
 
 // Задача №2
@@ -20,10 +20,13 @@ const task1Answer = null; // <- ваша відповідь
 
 function task2() {
   const result = [];
-  // ваш код тут
+  for(let i = 1; i < 11; ++i) {
+result.push(`Пункт №${i}`)
+}
 
   return result;
 }
+task2()
 
 
 // Задача №3
@@ -40,10 +43,19 @@ const task3Answer = null; // <- ваша відповідь
 // Функція ділення. Не має повертати NaN, Infinity або кидати помилку.
 // Повертає рядок виду: "Результат ділення: 5"
 
-function divide(a, b) {
-  // ваш код тут
+function divide(a,b) {
+let some = a/b;
+let result=``;
+if (typeof(a) !== 'number' || typeof(b) !== 'number') {
+result+=`please, enter a number`;
+} else if(b == 0 || b == null) {
+result+=`please, enter a number more then 0`;
+} else {
+result+=`Результат ділення: ${some}`
+} return result;
 }
 
+divide(10, 5);
 
 // Задача №5
 // Створіть масив із 5 елементів.
@@ -52,8 +64,8 @@ function divide(a, b) {
 // Поверніть true, якщо число знайдено, інакше false.
 
 function task5() {
-  const arr = []; // <- ваш масив (має містити число 10)
-
+  const arr = ['HTML', 10, 'CSS', 20, 'JS']; // <- ваш масив (має містити число 10)
+return arr.includes(10);
   // ваш код перебору тут
   // повертає true якщо знайдено 10, інакше false
 }
