@@ -54,7 +54,7 @@ result+=`please, enter a number more then 0`;
 result+=`Результат ділення: ${some}`
 } return result;
 }
-
+    
 divide(10, 5);
 
 // Задача №5
